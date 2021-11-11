@@ -1,0 +1,10 @@
+{
+    "Simulator Target Bundle": "com.as.uikit-navigation",
+    "aps": {
+        "alert": {
+            "title": "Hi,",
+            "body": "push search..."
+        }
+    },
+    "route": "search"
+}
