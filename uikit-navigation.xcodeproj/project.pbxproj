@@ -163,8 +163,7 @@
 		FA224489273950C600155D9C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FA034D0D273BDBB900B8E90E /* Tab.swift */,
-				FA224478273934AD00155D9C /* TabBarViewController.swift */,
+				FA651518273D19C600405E9D /* Tabs */,
 				FA22448E2739511E00155D9C /* Login */,
 				FA2244912739516900155D9C /* Search */,
 				FA2DE815273A934B009B814A /* Details */,
@@ -260,6 +259,15 @@
 				FA22446E273933B800155D9C /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		FA651518273D19C600405E9D /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				FA034D0D273BDBB900B8E90E /* Tab.swift */,
+				FA224478273934AD00155D9C /* TabBarViewController.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
