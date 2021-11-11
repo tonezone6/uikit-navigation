@@ -38,10 +38,10 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
         do {
             let json = response.notification.request.content.userInfo
             let data = try JSONSerialization.data(withJSONObject: json)
-            let response = try JSONDecoder().decode(Push.Response.self, from: data)
+            let payload = try JSONDecoder().decode(Push.Payload.self, from: data)
 
             coordinator?.activeTabCoordinator?.finishActiveFlows()
-            coordinator?.activeTabCoordinator?.route(response.route)
+            coordinator?.activeTabCoordinator?.route(payload.route)
         } catch {
             print("error parsing user notification", error.localizedDescription)
         }

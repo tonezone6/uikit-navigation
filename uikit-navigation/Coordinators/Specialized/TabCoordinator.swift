@@ -6,7 +6,7 @@ enum Push {
         case details, search
     }
     
-    struct Response: Decodable {
+    struct Payload: Decodable {
         let route: Route
     }
 }
