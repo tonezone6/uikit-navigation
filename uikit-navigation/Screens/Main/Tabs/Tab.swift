@@ -1,14 +1,14 @@
 
 enum Tab: String, CaseIterable {
-    case first, second, third
+    case A, B, C
 }
 
 extension Tab {
     init(tag: Int) {
         switch tag {
-        case 0: self = .first
-        case 1: self = .second
-        default: self = .third
+        case 0: self = .A
+        case 1: self = .B
+        default: self = .C
         }
     }
     
@@ -18,12 +18,9 @@ extension Tab {
     
     var icon: String {
         switch self {
-        case .first:
-            return "a.circle"
-        case .second:
-            return "b.circle"
-        case .third:
-            return "c.circle"
+        case .A: return "a.circle"
+        case .B: return "b.circle"
+        case .C: return "c.circle"
         }
     }
 }

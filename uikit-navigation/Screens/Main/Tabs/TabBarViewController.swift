@@ -12,7 +12,6 @@ class TabBarViewController: UITabBarController {
 
 extension TabBarViewController: UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        let tab = Tab(tag: item.tag)
-        coordinator?.makeActive(tab: tab)
+        coordinator?.makeActive(tab: .init(tag: item.tag))
     }
 }

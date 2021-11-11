@@ -35,12 +35,9 @@ extension MainCoordinator {
             (coordinator as? TabCoordinator)?.active = false
             
             switch tab {
-            case .first:
-                (coordinator as? ACoordinator)?.active = true
-            case .second:
-                (coordinator as? BCoordinator)?.active = true
-            case .third:
-                (coordinator as? CCoordinator)?.active = true
+            case .A: (coordinator as? ACoordinator)?.active = true
+            case .B: (coordinator as? BCoordinator)?.active = true
+            case .C: (coordinator as? CCoordinator)?.active = true
             }
         }
     }

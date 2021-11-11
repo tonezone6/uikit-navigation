@@ -10,33 +10,33 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let firstCoordinator  = ACoordinator(navigationController: UINavigationController())
-        let secondCoordinator = BCoordinator(navigationController: UINavigationController())
-        let thirdCoordinator  = CCoordinator(navigationController: UINavigationController())
+        let aCoordinator = ACoordinator(navigationController: UINavigationController())
+        let bCoordinator = BCoordinator(navigationController: UINavigationController())
+        let cCoordinator = CCoordinator(navigationController: UINavigationController())
         
-        firstCoordinator.active = true
-        firstCoordinator.navigationController.tabBarItem  = UITabBarItem(tab: .first)
-        secondCoordinator.navigationController.tabBarItem = UITabBarItem(tab: .second)
-        thirdCoordinator.navigationController.tabBarItem  = UITabBarItem(tab: .third)
+        aCoordinator.active = true
+        aCoordinator.navigationController.tabBarItem = UITabBarItem(tab: .A)
+        bCoordinator.navigationController.tabBarItem = UITabBarItem(tab: .B)
+        cCoordinator.navigationController.tabBarItem = UITabBarItem(tab: .C)
                 
-        childCoordinators.append(firstCoordinator)
-        childCoordinators.append(secondCoordinator)
-        childCoordinators.append(thirdCoordinator)
+        childCoordinators.append(aCoordinator)
+        childCoordinators.append(bCoordinator)
+        childCoordinators.append(cCoordinator)
                 
         let vc = TabBarViewController()
         vc.coordinator = self
         vc.setViewControllers([
-            firstCoordinator.navigationController,
-            secondCoordinator.navigationController,
-            thirdCoordinator.navigationController], animated: false
+            aCoordinator.navigationController,
+            bCoordinator.navigationController,
+            cCoordinator.navigationController], animated: false
         )
         
         navigationController.setViewControllers([vc], animated: false)
         navigationController.setNavigationBarHidden(true, animated: false)
         
-        firstCoordinator.start()
-        secondCoordinator.start()
-        thirdCoordinator.start()
+        aCoordinator.start()
+        bCoordinator.start()
+        cCoordinator.start()
         
         logDetails()
     }
